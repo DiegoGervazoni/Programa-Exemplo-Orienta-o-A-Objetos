@@ -2,9 +2,9 @@ package entities;
 
 public class Product {
 
-    public String name; //Atributo
-    public double price; //Atributo
-    public int quantity; //Atributo
+    private String name; //Atributo
+    private double price; //Atributo
+    private int quantity; //Atributo
 
     public Product() {
     }
@@ -20,15 +20,35 @@ public class Product {
         this.price = price;
     }
 
-    public double totalValueStock(){ //Método
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public double totalValueStock() { //Método
         return price * quantity;
     }
 
-    public void addProducts(int quantity){ //Método
+    public void addProducts(int quantity) { //Método
         this.quantity += quantity;
     }
 
-    public void removeProducts(int quantity){ //Método
+    public void removeProducts(int quantity) { //Método
         this.quantity -= quantity;
     }
 
